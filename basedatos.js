@@ -93,16 +93,22 @@ module.exports.buscar_nota=(peticion_cedula)=>
         console.log("el estudiante no existe");
     }else{
         console.log("notas del estudiante " + estudiante.nombre + " " +  estudiante.apellido);
+
         console.log("\nmatematicas: " + estudiante.matematicas.join(", "));
         console.log("promedio final: " + (estudiante.matematicas[0] + estudiante.matematicas[1] + estudiante.matematicas[2] + estudiante.matematicas[3]) / 4);
+        
         console.log("\nbiologia: " + estudiante.biologia.join(", "));
         console.log("promedio final: " + (estudiante.biologia[0] + estudiante.biologia[1] + estudiante.biologia[2] + estudiante.biologia[3]) / 4);
+        
         console.log("\nquimica: " + estudiante.quimica.join(", "));
         console.log("promedio final: " + (estudiante.quimica[0] + estudiante.quimica[1] + estudiante.quimica[2] + estudiante.quimica[3]) / 4);
+        
         console.log("\nfisica: " + estudiante.fisica.join(", "));
         console.log("promedio final: " + (estudiante.fisica[0] + estudiante.fisica[1] + estudiante.fisica[2] + estudiante.fisica[3]) / 4);
+        
         console.log("\ningles: " + estudiante.ingles.join(", "));
         console.log("promedio final: " + (estudiante.ingles[0] + estudiante.ingles[1] + estudiante.ingles[2] + estudiante.ingles[3]) / 4);
+        
         console.log("\ncastellano: " + estudiante.castellano.join(", "));
         console.log("promedio final: " + (estudiante.castellano[0] + estudiante.castellano[1] + estudiante.castellano[2] + estudiante.castellano[3]) / 4);
     }
