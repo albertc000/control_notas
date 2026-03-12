@@ -3,7 +3,7 @@
 const prompt = require("prompt-sync")();
 const BD = require("./basedatos.js");
 
-//menu usuario
+//menu usuario para elegir un tipo de usuario que hara distintas acciones a la base de datos
 let menu_usuario=0;
 let tipo_usuario=0;
     console.clear();
@@ -29,6 +29,7 @@ let tipo_usuario=0;
             console.log("seleccion invalida");
     }
 
+//tipo estudiante - solo podra ver sus notas
 if(tipo_usuario==1){
 
 let peticion_cedula = Number(prompt("ingrese su cedula: "))
@@ -51,6 +52,7 @@ let menu=1;
 }while(menu!=0);
 }
 
+//tipo admin - podra cambiar aspectos
 if(tipo_usuario==2){
 
 //entrada usuario admin
