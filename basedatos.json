@@ -1,0 +1,239 @@
+{
+  "lista_estudiantes": [
+    {
+      "nombre": "albert",
+      "apellido": "campos",
+      "cedula": "30717115",
+      "notas": [
+        2,
+        3,
+        2,
+        3
+      ],
+      "matematicas": [
+        2,
+        3,
+        2,
+        3
+      ],
+      "biologia": [
+        2,
+        3,
+        2,
+        3
+      ],
+      "quimica": [
+        2,
+        3,
+        2,
+        3
+      ],
+      "fisica": [
+        2,
+        3,
+        2,
+        3
+      ],
+      "ingles": [
+        2,
+        3,
+        2,
+        3
+      ],
+      "castellano": [
+        20,
+        20,
+        20,
+        15
+      ]
+    },
+    {
+      "nombre": "yeferson",
+      "apellido": "zambrano",
+      "cedula": "33713676",
+      "notas": [
+        17,
+        16,
+        15,
+        18
+      ],
+      "matematicas": [
+        2,
+        3,
+        2,
+        3
+      ],
+      "biologia": [
+        2,
+        3,
+        2,
+        3
+      ],
+      "quimica": [
+        2,
+        3,
+        2,
+        3
+      ],
+      "fisica": [
+        2,
+        3,
+        2,
+        3
+      ],
+      "ingles": [
+        2,
+        3,
+        2,
+        3
+      ],
+      "castellano": [
+        2,
+        3,
+        2,
+        3
+      ]
+    },
+    {
+      "nombre": "carlos",
+      "apellido": "viloria",
+      "cedula": "34790953",
+      "notas": [
+        20,
+        18,
+        19,
+        18
+      ],
+      "matematicas": [
+        2,
+        3,
+        2,
+        3
+      ],
+      "biologia": [
+        2,
+        3,
+        2,
+        3
+      ],
+      "quimica": [
+        2,
+        3,
+        2,
+        3
+      ],
+      "fisica": [
+        2,
+        3,
+        2,
+        3
+      ],
+      "ingles": [
+        2,
+        3,
+        2,
+        3
+      ],
+      "castellano": [
+        2,
+        3,
+        2,
+        3
+      ]
+    },
+    {
+      "nombre": "sandro",
+      "apellido": "viloria",
+      "cedula": "1234567",
+      "notas": [
+        19,
+        17,
+        20,
+        20
+      ],
+      "matematicas": [
+        0,
+        9,
+        0,
+        0
+      ],
+      "biologia": [
+        2,
+        3,
+        2,
+        3
+      ],
+      "quimica": [
+        2,
+        3,
+        2,
+        3
+      ],
+      "fisica": [
+        2,
+        3,
+        2,
+        3
+      ],
+      "ingles": [
+        2,
+        3,
+        2,
+        3
+      ],
+      "castellano": [
+        2,
+        3,
+        2,
+        3
+      ]
+    },
+    {
+      "nombre": "luis",
+      "apellido": "perez",
+      "cedula": 1234,
+      "notas": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "matematicas": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "biologia": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "quimica": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "fisica": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "ingles": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "castellano": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ]
+}
