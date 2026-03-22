@@ -1,9 +1,13 @@
 //base datos
+
+//PRIMERA VERSION - OBSOLETA
+
+
 let fs = require("fs");
 const readline = require('readline-sync');
 const prompt = require("prompt-sync")();
 
-let lista_estudiantes=[];
+let listaEstudiantes=[];
 let dataBase;
 
 module.exports.registrar_alumno=(nombre,apellido,cedula)=>
@@ -20,7 +24,7 @@ module.exports.registrar_alumno=(nombre,apellido,cedula)=>
         ingles:[0,0,0,0],
         castellano:[0,0,0,0]
     })
-    readline.keyInPause("operacion exitoso");
+    readline.keyInPause("operacion exitosa");
 }
 
 module.exports.cambiar_nota=()=>

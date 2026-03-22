@@ -1,20 +1,20 @@
 {
-  "lista_estudiantes": [
+  "listaEstudiantes": [
     {
+      "cedula": "1",
       "nombre": "albert",
       "apellido": "campos",
-      "cedula": "30717115",
       "notas": [
         2,
         3,
         2,
         3
       ],
-      "matematicas": [
-        2,
-        3,
-        2,
-        3
+      "matematica": [
+        0,
+        0,
+        0,
+        0
       ],
       "biologia": [
         2,
@@ -48,20 +48,20 @@
       ]
     },
     {
+      "cedula": "2",
       "nombre": "yeferson",
       "apellido": "zambrano",
-      "cedula": "33713676",
       "notas": [
         17,
         16,
         15,
         18
       ],
-      "matematicas": [
-        2,
-        3,
-        2,
-        3
+      "matematica": [
+        0,
+        0,
+        0,
+        0
       ],
       "biologia": [
         2,
@@ -95,20 +95,20 @@
       ]
     },
     {
+      "cedula": "3",
       "nombre": "carlos",
       "apellido": "viloria",
-      "cedula": "34790953",
       "notas": [
         20,
         18,
         19,
         18
       ],
-      "matematicas": [
-        2,
-        3,
-        2,
-        3
+      "matematica": [
+        0,
+        0,
+        0,
+        0
       ],
       "biologia": [
         2,
@@ -142,18 +142,18 @@
       ]
     },
     {
+      "cedula": "4",
       "nombre": "sandro",
       "apellido": "viloria",
-      "cedula": "1234567",
       "notas": [
         19,
         17,
         20,
         20
       ],
-      "matematicas": [
+      "matematica": [
         0,
-        9,
+        0,
         0,
         0
       ],
@@ -189,16 +189,63 @@
       ]
     },
     {
+      "cedula": "987",
       "nombre": "luis",
-      "apellido": "perez",
-      "cedula": 1234,
+      "apellido": "lopez",
       "notas": [
         0,
         0,
         0,
         0
       ],
-      "matematicas": [
+      "matematica": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "biologia": [
+        16,
+        18,
+        19,
+        20
+      ],
+      "quimica": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "fisica": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "ingles": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "castellano": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "cedula": "5",
+      "nombre": "lopez",
+      "apellido": "lopez",
+      "notas": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "matematica": [
         0,
         0,
         0,

@@ -1,5 +1,8 @@
 //albert campos, carlos viloria, yeferson zambrano, sandro montilla
 
+
+//PRIMERA VERSION - OBSOLETA
+
 const prompt = require("prompt-sync")();
 const BD = require("./basedatos.js");
 
