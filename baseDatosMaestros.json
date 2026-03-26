@@ -1,0 +1,10 @@
+{
+  "listaMaestros": [
+    {
+      "cedula": "1",
+      "nombre": "luis",
+      "apellido": "perez",
+      "materia": "quimica"
+    }
+  ]
+}

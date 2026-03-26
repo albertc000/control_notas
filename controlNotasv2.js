@@ -2,7 +2,7 @@
 
 const prompt = require("prompt-sync")();
 const readline = require('readline-sync');
-const {Estudiantes, Alumno} = require("./clasesFunciones.js")
+const {Estudiantes, Alumno} = require("./claseEstudiantes.js")
 let BDEstudiantes = new Estudiantes("baseDatosEstudiantes.json");
 
 //menu de usuario, para elegir un tipo de usuario que hara distintas acciones a la base de datos

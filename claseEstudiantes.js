@@ -4,10 +4,29 @@ const fs = require("fs");
 const prompt = require("prompt-sync")();
 const readline = require('readline-sync');
 
-class Alumno {
+//clase padre
+class Persona {
     cedula;
     nombre;
     apellido;
+
+    constructor(cedula, nombre, apellido){
+        this.cedula = cedula;
+        this.nombre = nombre;
+        this.apellido = apellido;
+    }
+
+    modificarNombre(nombre){
+        this.nombre = nombre;
+    }
+    modificarApellido(apellido){
+        this.apellido = apellido;
+    }
+}
+
+
+class Alumno extends Persona {
+    
     notas;
     matematica;
     biologia;
@@ -17,11 +36,10 @@ class Alumno {
     castellano;
 
     constructor(cedula, nombre, apellido, notas=[0,0,0,0], matematica=[0,0,0,0], biologia=[0,0,0,0], quimica=[0,0,0,0], fisica=[0,0,0,0], ingles=[0,0,0,0], castellano=[0,0,0,0]){
-        this.cedula = cedula;
-        this.nombre = nombre;
-        this.apellido = apellido;
+        super(cedula, nombre, apellido);
+
         this.notas = notas;
-        this. matematica = matematica;
+        this.matematica = matematica;
         this.biologia = biologia;
         this.quimica = quimica;
         this.fisica = fisica;
@@ -37,12 +55,17 @@ class Estudiantes {
 
     constructor(JsonName){
         this.#JsonName = JsonName;
+        //verifica si la ruta existe
         if (fs.existsSync(JsonName)) {
+            //como existe, lo lee
             const dataBase = fs.readFileSync(JsonName, "utf8");
+            //convierte ese JSON en un Objeto
             const data = JSON.parse(dataBase).listaEstudiantes;
 
+            //crea un nuevo array y lo asigna a listaEstudiantes
             this.#listaEstudiantes = data.map(a => new Alumno(a.cedula, a.nombre, a.apellido, a.notas, a.matematicas, a.biologia, a.quimica, a.fisica, a.ingles, a.castellano));
         }else{
+            //de lo contrario, lo crea
             const dataBase = JSON.stringify({listaEstudiantes: []}, null, 2);
             fs.writeFileSync(JsonName, dataBase);
         }
@@ -63,10 +86,8 @@ class Estudiantes {
 
     modificarAlumno(cedula, nombre, apellido){
         let alumno = this.buscarAlumno(cedula);
-        if (alumno != undefined) {
-            alumno.nombre = nombre;
-            alumno.apellido = apellido;
-        }
+        alumno.modificarNombre(nombre);
+        alumno.modificarApellido(apellido);
     }   
 
     buscarAlumno(cedula){
@@ -144,67 +165,18 @@ class Estudiantes {
         }
     }
 
-    /*
-
-        -----INNECESARIO-----
-
-    buscarNota(cedula, eleccionMateria){
-        let alumno = this.buscarAlumno(cedula);
-        if (alumno != undefined) {
-            switch(eleccionMateria){
-                case 1: 
-                    console.log(alumno.matematicas.join(", "));
-                    console.log((alumno.matematicas[0] + alumno.matematicas[1] + alumno.matematicas[2] + alumno.matematicas[3]) / 4);
-                    readline.keyInPause("presione una tecla para continuar");
-                break;
-                case 2: 
-                    console.log(alumno.biologia.join(", "));
-                    console.log("promedio final: " + (alumno.biologia[0] + alumno.biologia[1] + alumno.biologia[2] + alumno.biologia[3]) / 4);
-                    readline.keyInPause("presione una tecla para continuar");
-                break;
-                case 3: 
-                    console.log(alumno.quimica.join(", "));
-                    console.log("promedio final: " + (alumno.quimica[0] + alumno.quimica[1] + alumno.quimica[2] + alumno.quimica[3]) / 4);
-                    readline.keyInPause("presione una tecla para continuar");
-                break;
-                case 4: 
-                    console.log(alumno.fisica.join(", "));
-                    console.log("promedio final: " + (alumno.fisica[0] + alumno.fisica[1] + alumno.fisica[2] + alumno.fisica[3]) / 4);
-                    readline.keyInPause("presione una tecla para continuar");
-                break;
-                case 5: 
-                    console.log(alumno.ingles.join(", "));
-                    console.log("promedio final: " + (alumno.ingles[0] + alumno.ingles[1] + alumno.ingles[2] + alumno.ingles[3]) / 4);
-                    readline.keyInPause("presione una tecla para continuar");
-                break;
-                case 6: 
-                    console.log(alumno.castellano.join(", "));
-                    console.log("promedio final: " + (alumno.castellano[0] + alumno.castellano[1] + alumno.castellano[2] + alumno.castellano[3]) / 4);
-                    readline.keyInPause("presione una tecla para continuar");
-                break;
-                case 7:
-                    console.log(alumno.matematicas.join(", "));
-                    console.log(alumno.biologia.join(", "));
-                    console.log(alumno.quimica.join(", "));
-                    console.log(alumno.fisica.join(", "));
-                    console.log(alumno.ingles.join(", "));
-                    console.log(alumno.castellano.join(", "));
-                default:
-                    console.log("seleccion invalida");
-            }
-        }
-    }
-    */
-
     verTodasNotas(){
         return this.#listaEstudiantes;
     }
 
     cerrarBD(){
+        //guarda los datos de listaEstudiantes en esta clase al JSON
         const dataBase = JSON.stringify({listaEstudiantes: this.#listaEstudiantes }, null, 2);
         fs.writeFileSync(this.#JsonName, dataBase);
     }
 }
+
+module.exports.Persona = Persona;
 
 module.exports.Estudiantes = Estudiantes;
 module.exports.Alumno = Alumno;
